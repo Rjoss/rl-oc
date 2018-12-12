@@ -1,0 +1,25 @@
+{
+  "name": "rl-oc",
+  "version": "1.0.0",
+  "description": "OpenComponents",
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rjoss/rl-oc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rjoss/rl-oc/issues"
+  },
+  "homepage": "https://github.com/Rjoss/rl-oc#readme",
+  "author": {
+    "name": "Ross Labardee",
+    "email": "ross@rosslabardee.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "oc": "^0.44.0"
+  }
+}

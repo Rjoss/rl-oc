@@ -1,0 +1,42 @@
+{
+  "name": "rl-oc-registry",
+  "description": "A OpenComponents registry",
+  "repository": "https://github.com/Rjoss/rl-oc",
+  "logo": "https://avatars2.githubusercontent.com/u/1727702?v=4&s=200",
+  "keywords": [
+    "opencomponents",
+    "registry",
+    "microfrontends",
+    "node"
+  ],
+  "env": {
+    "BASEURL": {
+      "description": "The base url of the registry",
+      "value": ""
+    },
+    "S3_KEY": {
+      "description": "Your AWS S3 Key",
+      "value": ""
+    },
+    "S3_SECRET": {
+      "description": "Your AWS S3 Secret",
+      "value": ""
+    },
+    "S3_REGION": {
+      "description": "Your AWS S3 Region",
+      "value": ""
+    },
+    "S3_BUCKET": {
+      "description": "Your AWS Bucket Name",
+      "value": ""
+    },
+    "PUBLISH_USERNAME": {
+      "description": "The username needed to publish to the registry",
+      "value": ""
+    },
+    "PUBLISH_PASSWORD": {
+      "description": "The password needed to publish to the registry",
+      "value": ""
+    }
+  }
+}
