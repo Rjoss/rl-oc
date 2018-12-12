@@ -1,7 +1,5 @@
-'use strict';
+const debug = require('debug')('server.js');
 
-// Store ENV variables in .env to set up your local development
-// https://github.com/motdotla/dotenv#usage
 require('dotenv').config();
 const Registry = require('oc').Registry;
 
@@ -35,4 +33,8 @@ registry.start(function (err, app) {
     console.log('Registry not started: ', err);
     process.exit(1);
   }
+});
+
+registry.on('error:', (error) => {
+  console.log(`registry on error: ${error}`);
 });

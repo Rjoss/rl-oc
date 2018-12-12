@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^6.0.0",
-    "oc": "^0.44.0"
+    "oc": "^0.44.0",
+    "debug": "^2.6.8"
   }
 }
