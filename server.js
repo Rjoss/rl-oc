@@ -21,7 +21,12 @@ const configuration = {
     path: `//s3.${process.env.S3_REGION}.amazonaws.com/${process.env.S3_BUCKET}/`,
     componentsDir: 'components'
   },
-  dependencies: []
+  dependencies: [],
+  templates: [
+    require('oc-template-jade'),
+    require('oc-template-handlebars'),
+    require('oc-template-react')
+  ]
 };
 
 // Instantiate the registry
