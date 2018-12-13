@@ -3,9 +3,6 @@ const debug = require('debug')('server.js');
 require('dotenv').config();
 const Registry = require('oc').Registry;
 
-// Minimal configuration for the registry
-// For advanced configuration check the documantion:
-// https://github.com/opentable/oc/wiki/Registry
 const configuration = {
   baseUrl: process.env.NOW_URL || process.env.BASEURL,
   port: process.env.PORT || 3000,
