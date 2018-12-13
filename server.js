@@ -4,6 +4,8 @@ require('dotenv').config();
 const Registry = require('oc').Registry;
 
 const configuration = {
+  tempDir: './temp/',
+  verbosity: 1,
   baseUrl: process.env.NOW_URL || process.env.BASEURL,
   port: process.env.PORT || 3000,
   publishAuth: {
@@ -25,13 +27,14 @@ const configuration = {
 // Instantiate the registry
 // An express.js app is exposed as registry.app
 const registry = new Registry(configuration);
+
+registry.on('error:', (error) => {
+  console.log(`registry on error: ${error}`);
+});
+
 registry.start(function (err, app) {
   if (err) {
     console.log('Registry not started: ', err);
     process.exit(1);
   }
-});
-
-registry.on('error:', (error) => {
-  console.log(`registry on error: ${error}`);
 });
