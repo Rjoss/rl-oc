@@ -25,7 +25,8 @@ const configuration = {
   templates: [
     require('oc-template-jade'),
     require('oc-template-handlebars'),
-    require('oc-template-react')
+    require('oc-template-react'),
+    require('oc-template-es6')
   ]
 };
 
@@ -34,12 +35,13 @@ const configuration = {
 const registry = new Registry(configuration);
 
 registry.on('error:', (error) => {
-  console.log(`registry on error: ${error}`);
+  throw new Error(error);
 });
 
 registry.start(function (err, app) {
   if (err) {
-    console.log('Registry not started: ', err);
+    console.log('Registry failed to start');
+    throw new Error(error);
     process.exit(1);
   }
 });
